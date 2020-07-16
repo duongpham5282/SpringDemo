@@ -1,0 +1,15 @@
+spring:
+  jpa:
+    database: sqlserver
+    show-sql: true
+    hibernate:
+      dialect: org.hibernate.dialect.SQLServer2012Dialect
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+      ddl-auto: create-drop
+
+  datasource:
+    url: jdbc:sqlserver://localhost;databaseName=Testing
+    username: sa
+    password: p@ssword
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
