@@ -6,7 +6,7 @@ spring:
       dialect: org.hibernate.dialect.SQLServer2012Dialect
       naming:
         physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
-      ddl-auto: create-drop
+      ddl-auto: update
 
   datasource:
     url: jdbc:sqlserver://localhost;databaseName=Testing
