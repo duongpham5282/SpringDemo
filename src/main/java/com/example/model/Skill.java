@@ -9,6 +9,7 @@ import org.hibernate.annotations.LazyToOneOption;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Collection;
 
 @Entity
 @Table(name="skill")
@@ -32,5 +33,10 @@ public class Skill implements Serializable {
     @EqualsAndHashCode.Exclude
     @ToString.Exclude
     private Employee employee;
+
+    @OneToMany(mappedBy = "skill", cascade = CascadeType.ALL,fetch = FetchType.LAZY, orphanRemoval = true)
+    @EqualsAndHashCode.Exclude
+    @ToString.Exclude
+    private Collection<Cource> cources;
 
 }
